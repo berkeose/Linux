@@ -197,3 +197,88 @@ zip -r zipadi.zip dizin/icindeki/klasor1 dizin/icindeki/klasor2
 
 
 tar -cvf /tmp/my_home_directory.tar /home/ecoxx 
+
+
+
+nbtstat komutu: Bu komut sayesinde TCP/IP üzerinden NETBIOS bağlantılarının detaylarını görmemiz sağlanmaktadır.
+
+NETBIOS nedir?
+Network Basic Input/Output System yani NETBIOS network üzerindeki cihazların birbirleri ile iletişim kurmasını sağlayan api’dir.
+Bu komutlara birkaç örnek vermek gerekirse:
+
+> nbtstat –c = NETBIOS Cache’ini göstermektedir.
+> 
+> nbtstat –n = Cihazların üzerinde (Server) hangi servislerin kurulu olduğunu gösterir.
+> 
+> nbtstat –a [Server-Name] = Yazılan bilgisayar adı üzerindeki roleleri gösterir.
+> 
+> nbtstat –A [ip-address] = Yazılan ip adresi üzerindeki roleleri gösterir.
+
+> nbtstat –r = Ortamdaki bilgisayarlar broadcast yapılarak ya da WINS tarafından bulunarak listesi verilir.
+> 
+> nbtstat –R = Cache tablosunu temizler ve yeniden yükler.
+> 
+> nbtstat –RR = Silme talebini WINS Servera gönderir ve kendine ait kaydı siler ve sonra tekrar ekler.
+
+NBTSTAT Servis Kodları :
+
+<Computer_name> <00> = Workstation Service
+
+<Computer_name> v<01> = Messenger Service
+
+<Computer_name> <03> = Messenger Service
+
+<Computer_name> <06> = Ras Server Service
+
+<Computer_name> <20> = File Server Service
+
+<Computer_name> <21> = Ras Client Service
+
+<Computer_name> <BE> = Network Monitor Agent
+  
+<Computer_name> <BF> = Network Monitor Application
+  
+<Username> <03> = Messenger Service
+  
+<Domain> <00> = Domain Name
+  
+<Domain> <1B> = Domain Master Browser
+  
+<Domain> <1C> = Domain Controllers
+  
+<Domain> <1D> = Master Browser
+  
+<Domain> <1E> = Browser Service Elections
+  
+<INet~Service> <1C> = ISS
+  
+<IS~Computer_Name> <00> = IIS
+  
+ Nslookup Komutu Nedir?: Dns Serverin Düzgün çalışıp çalışmadığı kontrol etmek için kullanılır.
+  
+  Bu komutu yazarak Enter’a bastığınızda DNS sunucunuz ve DNS adresinizin  hangisi olduğunu göreceksiniz
+  
+  
+  
+  Netcat 2 şekilde çalışabilir:
+
+müşteri
+
+Bu modda dinleyiciyle bağlantı kurmaktan sorumlu olacak (belirli bir adres ve IP'yi dinliyor ve bilmemiz gerekecek).
+
+Sunucu veya dinleyici
+
+İstemci bağlantılarını belirli bir bağlantı noktasında bekleyin.
+  
+  Netcat'ın birçok seçeneği var, hadi görelim:
+Bazı netcar seçenekleri
+
+-l : Netcat'e dinlemeye devam etmesi gerektiğini söyler.
+-p : Kaynak bağlantı noktasını belirtmek için.
+-s : Kaynak adresini belirtmek için.
+-k : “Sonsuz” bağlantılara izin vermek için dinleyici (-l ile kullanılır).
+-u : Netcat, TCP'yi (varsayılan olarak) TCP yerine UDP olarak açar.
+-v : Bu seçenekle bize bağlantı bilgilerini göstereceksiniz.
+-i : Gönderme ve alma gecikmesini belirtmek için. (Saniye içinde)
+-4 : Netcat'ın sadece IPv4 kullanması içindir.
+-6 : Bir öncekine benzer ancak IPv6'yı kullanmaya zorlayın.
