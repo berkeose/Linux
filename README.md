@@ -274,11 +274,19 @@ Sunucu veya dinleyici
 Bazı netcar seçenekleri
 
 -l : Netcat'e dinlemeye devam etmesi gerektiğini söyler.
+  
 -p : Kaynak bağlantı noktasını belirtmek için.
+  
 -s : Kaynak adresini belirtmek için.
+  
 -k : “Sonsuz” bağlantılara izin vermek için dinleyici (-l ile kullanılır).
+  
 -u : Netcat, TCP'yi (varsayılan olarak) TCP yerine UDP olarak açar.
+  
 -v : Bu seçenekle bize bağlantı bilgilerini göstereceksiniz.
+  
 -i : Gönderme ve alma gecikmesini belirtmek için. (Saniye içinde)
+  
 -4 : Netcat'ın sadece IPv4 kullanması içindir.
+  
 -6 : Bir öncekine benzer ancak IPv6'yı kullanmaya zorlayın.
